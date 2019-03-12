@@ -21,9 +21,9 @@ app.use(bodyParser.json())
 app.post("/", function(req,res){
   console.log(req.body.user)
   var elem = "password"
-  req.body.user = 'CIAO MATTEO';
+  req.body.fulfillmentMessages.payload.user = 'CIAO MATTEO';
   var pass = req.body.password + 1;
-  delete req.body.password;
+  delete req.body.fulfillmentMessages.payload.password;
   req.body.Elemento = pass;
 
   res.json(req.body);
