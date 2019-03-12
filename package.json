@@ -1,0 +1,23 @@
+{
+  "name": "api_json",
+  "version": "1.0.0",
+  "description": "Test API con JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatteoFilo/API_JSON.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatteoFilo/API_JSON/issues"
+  },
+  "homepage": "https://github.com/MatteoFilo/API_JSON#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}
