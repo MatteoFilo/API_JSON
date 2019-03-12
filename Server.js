@@ -1,10 +1,39 @@
-﻿const express = require('express')
-const app = express()
+﻿var express = require("express");
+var app = express();
+var path = require('path');
+var bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: false }));
+app.get("/", function(req, res) {
+    res.send('TEXT');
+});
 
-const PORT = process.env.PORT || 3000
+//app.use(bodyParser.text({type: 'text/plain'}))
+//app.post("/", function(req,res){
+//    console.log("Ricevuto una richiesta POST");
+//   var password = req.body;
+//  console.log("password is "+ password);
+//  res.end("yes " + req.body);
+//});
+
+app.use(bodyParser.json())
+app.post("/", function(req,res){
+  console.log(req.body.user)
+  var elem = "password"
+  req.body.user = 'CIAO MATTEO';
+  var pass = req.body.password + 1;
+  //req.body.delete("password");
+  delete req.body.password;
+  //req.body.skills = "Elemento";
+  req.body.Elemento = pass;
+  //res.end("yes " + req.body.user + " - " + req.body.Elemento);
+  res.json(req.body);
+});
+
+var port = process.env.PORT || 3000;
+app.listen(port, function() {
+    console.log("Listening on " + port);
+});
 
 
-app.get('/', (req, res) => res.status(200).send({"message":"Return"}))
 
 
-app.listen(PORT, () => console.log('Example app listening on port'+ PORT))
