@@ -2,6 +2,8 @@
 var app = express();
 var path = require('path');
 var bodyParser = require("body-parser");
+
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.get("/", function(req, res) {
     res.send('TEXT');
@@ -21,11 +23,9 @@ app.post("/", function(req,res){
   var elem = "password"
   req.body.user = 'CIAO MATTEO';
   var pass = req.body.password + 1;
-  //req.body.delete("password");
   delete req.body.password;
-  //req.body.skills = "Elemento";
   req.body.Elemento = pass;
-  //res.end("yes " + req.body.user + " - " + req.body.Elemento);
+
   res.json(req.body);
 });
 
