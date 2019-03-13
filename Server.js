@@ -21,12 +21,17 @@ app.use(bodyParser.json())
 app.post("/", function(req,res){
   console.log(req.body.user)
   var elem = "password"
-  req.body.fulfillmentMessages.payload.user = 'CIAO MATTEO';
-  var pass = req.body.password + 1;
-  delete req.body.fulfillmentMessages.payload.password;
-  req.body.Elemento = pass;
 
-  res.json(req.body);
+  var payload_ = req.body.fulfillmentMessages.find(
+   (payload));
+  payload_.user = 'CIAO MATTEO';
+  //req.body.fulfillmentMessages.payload.user = 'CIAO MATTEO';
+  
+  //var pass = req.body.password + 1;
+  //delete req.body.fulfillmentMessages.payload.password;
+  //req.body.Elemento = pass;
+
+  res.json(payload_.user);
 });
 
 var port = process.env.PORT || 3000;
