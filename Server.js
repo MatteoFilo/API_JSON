@@ -30,13 +30,13 @@ app.post("/", function(req,res){
 
   //res.json(req.body.queryResult.fulfillmentMessages.payload.user + " " + req.body.queryResult.fulfillmentMessages.payload.password + 1 );
   var resp = {
-  "fulfillmentText": "this is fulfillmentText",
-  "fulfillmentMessages": [
+  'fulfillmentText': 'this is fulfillmentText',
+  'fulfillmentMessages': [
     {
-      "simpleResponse": {
-        "text_to_speech": "ini simple responses",
-        "ssml": "ini ssml",
-        "display_text": "ini simple responses"
+      'simpleResponse': {
+        'text_to_speech': 'imple',
+        'ssml': 'ini ssml',
+        'display_text': 'ini simple responses'
       }
     }
   ]
