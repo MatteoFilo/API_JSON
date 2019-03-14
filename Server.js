@@ -28,7 +28,8 @@ app.post("/", function(req,res){
   //delete req.body.fulfillmentMessages.payload.password;
   //req.body.Elemento = pass;
 
-  res.json(req.body.queryResult.fulfillmentMessages.payload.user + " " + req.body.queryResult.fulfillmentMessages.payload.password + 1 );
+  //res.json(req.body.queryResult.fulfillmentMessages.payload.user + " " + req.body.queryResult.fulfillmentMessages.payload.password + 1 );
+    res.json(req.body);
 });
 
 var port = process.env.PORT || 3000;
