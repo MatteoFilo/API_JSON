@@ -22,7 +22,7 @@ app.post("/", function(req,res){
   //console.log(req.body.user)
   //var elem = "password"
   
-  req.body.queryResult.fulfillmentMessages.payload.user = 'CIAO MATTEO';
+  //req.body.queryResult.fulfillmentMessages.payload.user = 'CIAO MATTEO';
   
   //var pass = req.body.password + 1;
   //delete req.body.fulfillmentMessages.payload.password;
