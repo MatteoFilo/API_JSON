@@ -22,13 +22,13 @@ app.post("/", function(req,res){
   console.log(req.body.user)
   var elem = "password"
   
-  req.body.queryResult.fulfillmentMessages.payload.user = 'CIAO MATTEO';
+  //req.body.queryResult.fulfillmentMessages.payload.user = 'CIAO MATTEO';
   
   //var pass = req.body.password + 1;
   //delete req.body.fulfillmentMessages.payload.password;
   //req.body.Elemento = pass;
 
-  res.json(eq.body.queryResult.fulfillmentMessages.payload.user + " " + eq.body.queryResult.fulfillmentMessages.payload.password + 1 );
+  res.json(req.body.queryResult.fulfillmentMessages.payload.user + " " + req.body.queryResult.fulfillmentMessages.payload.password + 1 );
 });
 
 var port = process.env.PORT || 3000;
