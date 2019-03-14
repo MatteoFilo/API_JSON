@@ -29,21 +29,10 @@ app.post("/", function(req,res){
   //req.body.Elemento = pass;
 
   //res.json(req.body.queryResult.fulfillmentMessages.payload.user + " " + req.body.queryResult.fulfillmentMessages.payload.password + 1 );
-  var resp = {
-  "google": {
-    "expectUserResponse": true,
-    "richResponse": {
-      "items": [
-        {
-          "simpleResponse": {
-            "textToSpeech": "this is a simple response"
-          }
-        }
-      ]
-    }
-  }
-}
-    res.json(resp);
+  var chat="success response";
+  response.setHeader('Content-Type','application/json');
+  response.send(JSON.stringify({"fulfillmentText":chat}));
+  //res.json(resp);
     //res.end("MATTEO");
 });
 
