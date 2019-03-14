@@ -30,16 +30,18 @@ app.post("/", function(req,res){
 
   //res.json(req.body.queryResult.fulfillmentMessages.payload.user + " " + req.body.queryResult.fulfillmentMessages.payload.password + 1 );
   var resp = {
-  'fulfillmentText': 'this is fulfillmentText',
-  'fulfillmentMessages': [
-    {
-      'simpleResponse': {
-        'text_to_speech': 'imple',
-        'ssml': 'ini ssml',
-        'display_text': 'ini simple responses'
-      }
+  "google": {
+    "expectUserResponse": true,
+    "richResponse": {
+      "items": [
+        {
+          "simpleResponse": {
+            "textToSpeech": "this is a simple response"
+          }
+        }
+      ]
     }
-  ]
+  }
 }
     res.json(resp);
     //res.end("MATTEO");
