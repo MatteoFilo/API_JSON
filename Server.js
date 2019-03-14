@@ -30,9 +30,8 @@ app.post("/", function(req,res){
 
   //res.json(req.body.queryResult.fulfillmentMessages.payload.user + " " + req.body.queryResult.fulfillmentMessages.payload.password + 1 );
   var chat="success response";
-  response.setHeader('Content-Type','application/json');
-  response.send(JSON.stringify({"fulfillmentText":chat}));
-  //res.json(resp);
+  res.setHeader('Content-Type','application/json');
+  res.json({"fulfillmentText":chat});
     //res.end("MATTEO");
 });
 
